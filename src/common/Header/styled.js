@@ -87,5 +87,6 @@ export const Avatar = styled.img`
     width: 35px;
     margin-right: 20px;
     padding: 20px 0;
+    border: none;
   }
 `;
