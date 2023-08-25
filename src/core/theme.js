@@ -1,5 +1,5 @@
 export const theme = {
-  colorsPrimary: {
+  primaryColors: {
     orange: "hsl(26, 100% ,55%)",
     paleOrange: "hsl(25, 100%, 94%)",
   },
