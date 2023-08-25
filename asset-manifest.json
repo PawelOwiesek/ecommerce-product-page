@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/ecommerce-product-page/static/js/main.b84e9e42.js",
+    "static/js/787.e98044ab.chunk.js": "/ecommerce-product-page/static/js/787.e98044ab.chunk.js",
+    "index.html": "/ecommerce-product-page/index.html",
+    "main.b84e9e42.js.map": "/ecommerce-product-page/static/js/main.b84e9e42.js.map",
+    "787.e98044ab.chunk.js.map": "/ecommerce-product-page/static/js/787.e98044ab.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.b84e9e42.js"
+  ]
+}
