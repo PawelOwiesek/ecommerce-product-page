@@ -1,5 +1,8 @@
-# Getting Started with Create React App
-
+<div align=center>
+  <h1>Ecommerce-landing-page</h1>
+  <p><strong>DEMO:</strong> https://pawelowiesek.github.io/landing-bank-page/</p>
+ <img width=450px src="https://github.com/PawelOwiesek/ecommerce-product-page/blob/master/public/ecommerce.png" rel="image"/>
+</div>
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
