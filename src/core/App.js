@@ -1,5 +1,7 @@
+import Header from "../common/Header";
+
 function App() {
-  return <div></div>;
+  return <Header />;
 }
 
 export default App;
