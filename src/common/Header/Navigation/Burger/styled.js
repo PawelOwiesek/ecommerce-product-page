@@ -6,9 +6,9 @@ export const Container = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     width: 40px;
     height: 18px;
-    position: fixed;
+    position: absolute;
     top: 30px;
-    left: 0;
+    left: -10px;
     margin-left: 15px;
     display: flex;
     flex-direction: column;
