@@ -1,40 +1,21 @@
-import {
-  Avatar,
-  Cart,
-  Container,
-  Item,
-  Link,
-  Logo,
-  Navigation,
-} from "./styled";
+import { Avatar, Cart, Container, Logo } from "./styled";
 import logo from "../../images/icons/logo.svg";
 import cart from "../../images/icons/icon-cart.svg";
 import avatar from "../../images/jpgImages/image-avatar.png";
-import { Burger } from "./Burger/burger";
+import { Burger } from "./Navigation/Burger/burger";
+import { useState } from "react";
 
 const Header = () => {
-  const mobile = window.innerWidth <= 768;
+  const [open, setOpen] = useState(false);
+
+  const onBurgerClick = () => {
+    setOpen(!open);
+  };
+
   return (
     <Container>
-      {mobile ? <Burger /> : null}
       <Logo src={logo} alt="logo" />
-      <Navigation>
-        <Item>
-          <Link href="#collections">Collections</Link>
-        </Item>
-        <Item>
-          <Link href="#men">Men</Link>
-        </Item>
-        <Item>
-          <Link href="#women">Women</Link>
-        </Item>
-        <Item>
-          <Link href="#about">About</Link>
-        </Item>
-        <Item>
-          <Link href="#contact">Contact</Link>
-        </Item>
-      </Navigation>
+      <Burger open={open} onBurgerClick={onBurgerClick} />
       <Cart src={cart} alt="cart" />
       <Avatar src={avatar} alt="avatar" />
     </Container>
