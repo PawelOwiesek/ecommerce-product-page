@@ -13,7 +13,7 @@ export const GlobalStyles = createGlobalStyle`
 
     body{
         font-family:"Kumbh+Sans",sans-serif;
-        max-width:1200px;
+        max-width:1000px;
         margin:0 auto;
         background-color: ${({ theme }) => theme.neutralColors.white};
     };
