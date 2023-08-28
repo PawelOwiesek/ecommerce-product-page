@@ -1,6 +1,5 @@
 import { styled } from "styled-components";
 
-export const Container = styled.section``;
 export const Counter = styled.div``;
 
 export const TileList = styled.ul`
