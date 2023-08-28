@@ -1,9 +1,13 @@
 import {
+  Button,
+  Buttons,
   Container,
   Description,
   Discount,
   Image,
   ImageSmall,
+  Next,
+  Previous,
   Price,
   Promotie,
   Subtitle,
@@ -21,13 +25,25 @@ const Tile = ({
   discountPrice,
   discount,
   price,
+  onIndexPrevChange,
+  onIndexNextChange,
 }) => {
   return (
     <Container>
       {small ? (
         <ImageSmall src={image} alt={alt} />
       ) : (
-        <Image src={image} alt={alt} />
+        <>
+          <Image src={image} alt={alt} />
+          <Buttons>
+            <Button onClick={() => onIndexPrevChange()}>
+              <Previous />
+            </Button>
+            <Button onClick={() => onIndexNextChange()}>
+              <Next />
+            </Button>
+          </Buttons>
+        </>
       )}
       {small ? null : (
         <Wrapper>

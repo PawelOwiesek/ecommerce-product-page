@@ -1,10 +1,6 @@
 import { styled } from "styled-components";
 
-export const Container = styled.section`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
-`;
+export const Container = styled.section``;
 export const Counter = styled.div``;
 
 export const TileList = styled.ul`

@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { ReactComponent as previous } from "../../images/icons/icon-previous.svg";
+import { ReactComponent as next } from "../../images/icons/icon-next.svg";
 
 export const Container = styled.div`
   display: grid;
@@ -18,7 +20,7 @@ export const Image = styled.img`
   justify-self: flex-start;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.large}) {
-    max-width: 700px;
+    max-width: 767px;
     margin: 40px 0 0;
   }
 
@@ -140,3 +142,38 @@ export const Price = styled.p`
     top: 660px;
   }
 `;
+
+export const Buttons = styled.div`
+  display: none;
+  @media (max-width: ${({ theme }) => theme.breakpoints.large}) {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 350px;
+    left: 0px;
+    width: 100vw;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    top: 200px;
+  }
+`;
+
+export const Button = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  width: 35px;
+  height: 35px;
+  border: 2px solid ${({ theme }) => theme.primaryColors.orange};
+  border-radius: 50%;
+  background-color: ${({ theme }) => theme.neutralColors.white};
+  transition: 0, 3s linear;
+  &:hover {
+    transform: scale(1.1);
+  }
+`;
+
+export const Previous = styled(previous)``;
+export const Next = styled(next)``;

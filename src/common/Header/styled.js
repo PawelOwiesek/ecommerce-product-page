@@ -9,10 +9,6 @@ export const Container = styled.div`
     ${({ theme }) => theme.neutralColors.lightGrayishBlue};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.large}) {
-    grid-template-columns: 350px auto auto;
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     grid-template-columns: 1fr auto auto;
   }
 `;
@@ -20,16 +16,6 @@ export const Container = styled.div`
 export const Logo = styled.img`
   width: 125px;
   height: 19px;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.large}) {
-    width: 170px;
-    height: 29px;
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    width: 125px;
-    height: 19px;
-  }
 `;
 
 export const Cart = styled.img`
