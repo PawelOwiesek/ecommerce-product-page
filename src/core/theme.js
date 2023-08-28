@@ -10,6 +10,7 @@ export const theme = {
     lightGrayishBlue: "hsl(223, 64%, 98%)",
     white: "hsl(0, 0%, 100%)",
     black: " hsl(0, 0%, 0%)",
+    darkGray: "#655b54bf",
   },
 
   breakpoints: {
