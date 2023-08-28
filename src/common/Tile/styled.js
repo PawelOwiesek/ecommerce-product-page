@@ -4,21 +4,32 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: auto 1fr;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.large}) {
     display: flex;
     flex-direction: column;
+    justify-content: center;
   }
 `;
 
 export const Image = styled.img`
   margin: 70px 0 0 30px;
-  width: 450px;
+  max-width: 450px;
   border-radius: 15px;
   justify-self: flex-start;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.large}) {
+    max-width: 700px;
+    margin: 40px 0 0;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+    max-width: 500px;
+    border-radius: 0;
+  }
+
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     margin: 0;
-    width: 320px;
-    border-radius: 0;
+    max-width: 320px;
   }
 `;
 
@@ -34,25 +45,49 @@ export const Wrapper = styled.div`
   align-items: flex-start;
   margin: 60px 0 0 100px;
   width: 400px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    align-items: center;
+  }
+
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     margin: 10px;
     width: 300px;
+    align-items: flex-start;
   }
 `;
+
 export const Subtitle = styled.p`
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 1px;
   color: ${({ theme }) => theme.primaryColors.orange};
   margin: 0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+    font-size: 20px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: 12px;
+  }
 `;
 
 export const Title = styled.p`
   margin: 10px 0 20px;
   font-size: 40px;
   font-weight: 700;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+    text-align: center;
+  }
+
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     font-size: 24px;
+    text-align: start;
   }
 `;
 
@@ -62,6 +97,14 @@ export const Description = styled.p`
   line-height: 1.5;
   max-width: 320px;
   color: ${({ theme }) => theme.neutralColors.darkGrayishBlue};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+    font-size: 28px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: 16px;
+  }
 `;
 
 export const Promotie = styled.p`
@@ -90,4 +133,10 @@ export const Price = styled.p`
   text-decoration-line: line-through;
   font-size: 14px;
   color: ${({ theme }) => theme.neutralColors.grayishBlue};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    position: absolute;
+    right: 25px;
+    top: 660px;
+  }
 `;

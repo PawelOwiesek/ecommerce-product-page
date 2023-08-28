@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 export const Container = styled.div`
   display: none;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.large}) {
     width: 40px;
     height: 18px;
     position: absolute;
