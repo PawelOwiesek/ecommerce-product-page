@@ -6,7 +6,7 @@ export const Container = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoints.large}) {
     width: 40px;
     height: 18px;
-    position: absolute;
+    position: fixed;
     top: 30px;
     left: -10px;
     margin-left: 15px;
