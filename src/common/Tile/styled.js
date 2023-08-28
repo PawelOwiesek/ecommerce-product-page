@@ -168,8 +168,13 @@ export const Button = styled.button`
   height: 35px;
   border: 2px solid ${({ theme }) => theme.primaryColors.orange};
   border-radius: 50%;
-  background-color: ${({ theme }) => theme.neutralColors.white};
-  transition: 0, 3s linear;
+  transition: 3s linear;
+
+  &:disabled {
+    background-color: ${({ theme }) => theme.neutralColors.darkGray};
+    border: 2px solid ${({ theme }) => theme.neutralColors.darkGray};
+  }
+
   &:hover {
     transform: scale(1.1);
   }

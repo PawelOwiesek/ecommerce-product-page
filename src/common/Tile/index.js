@@ -27,6 +27,7 @@ const Tile = ({
   price,
   onIndexPrevChange,
   onIndexNextChange,
+  itemIndex,
 }) => {
   return (
     <Container>
@@ -36,10 +37,16 @@ const Tile = ({
         <>
           <Image src={image} alt={alt} />
           <Buttons>
-            <Button onClick={() => onIndexPrevChange()}>
+            <Button
+              disabled={itemIndex === 0 ? true : false}
+              onClick={() => onIndexPrevChange()}
+            >
               <Previous />
             </Button>
-            <Button onClick={() => onIndexNextChange()}>
+            <Button
+              disabled={itemIndex === 3 ? true : false}
+              onClick={() => onIndexNextChange()}
+            >
               <Next />
             </Button>
           </Buttons>
