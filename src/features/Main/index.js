@@ -4,9 +4,24 @@ import { data } from "../../core/assets/data";
 import { Container, Counter, Item, TileList } from "./styled";
 
 const Main = () => {
-  const [itemIndex, setItemIndex] = useState(0);
+  const [itemIndex, setItemIndex] = useState(3);
+
   const handleImageChange = (index) => {
     setItemIndex(index);
+  };
+
+  const onIndexPrevChange = (index) => {
+    if (index === 0) {
+      return;
+    }
+    setItemIndex(index - 1);
+  };
+
+  const onIndexNextChange = (index) => {
+    if (index >= 3) {
+      return;
+    }
+    setItemIndex(index + 1);
   };
 
   return (
@@ -27,6 +42,8 @@ const Main = () => {
                   discount={path.discount}
                   price={path.price}
                   handleImageChange={() => handleImageChange(itemIndex)}
+                  onIndexPrevChange={() => onIndexPrevChange(itemIndex)}
+                  onIndexNextChange={() => onIndexNextChange(itemIndex)}
                 />
               </div>
             );
