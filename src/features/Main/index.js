@@ -4,6 +4,7 @@ import { data } from "../../core/assets/data";
 import {
   Button,
   CartIcon,
+  Container,
   Count,
   Counter,
   CounterButton,
@@ -11,9 +12,11 @@ import {
   Item,
   TileList,
 } from "./styled";
+import PopOut from "../../common/PopOut";
 
 const Main = ({ counter, setCounter, addProductsToCart }) => {
   const [itemIndex, setItemIndex] = useState(0);
+  const [active, setActive] = useState(false);
 
   const handleImageChange = (index) => {
     setItemIndex(index);
@@ -44,8 +47,13 @@ const Main = ({ counter, setCounter, addProductsToCart }) => {
     return setCounter((counter) => counter + 1);
   };
 
+  const setActiveItem = () => {
+    setActive(!active);
+    console.log(active);
+  };
+
   return (
-    <>
+    <Container active={active}>
       {data.map((item) => {
         const path = item.fall;
         return (
@@ -61,6 +69,7 @@ const Main = ({ counter, setCounter, addProductsToCart }) => {
                 discountPrice={path.discountPrice}
                 discount={path.discount}
                 price={path.price}
+                setActiveItem={setActiveItem}
                 handleImageChange={() => handleImageChange(itemIndex)}
                 onIndexPrevChange={() => onIndexPrevChange(itemIndex)}
                 onIndexNextChange={() => onIndexNextChange(itemIndex)}
@@ -94,7 +103,13 @@ const Main = ({ counter, setCounter, addProductsToCart }) => {
           ));
         })}{" "}
       </TileList>
-    </>
+      <PopOut
+        active={active}
+        setActiveItem={setActiveItem}
+        itemIndex={itemIndex}
+        handleImageChange={handleImageChange}
+      />
+    </Container>
   );
 };
 
