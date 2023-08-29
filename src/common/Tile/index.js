@@ -29,6 +29,7 @@ const Tile = ({
   onIndexNextChange,
   itemIndex,
 }) => {
+  let result;
   return (
     <Container>
       {small ? (
@@ -58,10 +59,11 @@ const Tile = ({
           <Title>{title}</Title>
           <Description>{description}</Description>
           <Promotie>
-            {discountPrice}
+            ${discountPrice}
             {discount ? <Discount>{discount}</Discount> : null}
           </Promotie>
           <Price>{price}</Price>
+          {result}
         </Wrapper>
       )}
     </Container>
