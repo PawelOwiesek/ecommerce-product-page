@@ -1,6 +1,5 @@
 import { styled } from "styled-components";
-
-export const Counter = styled.div``;
+import { ReactComponent as cart } from "../../images/icons/icon-cart.svg";
 
 export const TileList = styled.ul`
   list-style-type: none;
@@ -24,4 +23,46 @@ export const Item = styled.li`
   &:hover {
     border: 3px solid ${({ theme }) => theme.primaryColors.orange};
   }
+`;
+
+export const CounterWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  width: 450px;
+  float: right;
+  gap: 20px;
+`;
+
+export const Counter = styled.p`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+  height: 50px;
+  background-color: ${({ theme }) => theme.neutralColors.lightGrayishBlue};
+  border-radius: 15px;
+`;
+
+export const Button = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 230px;
+  height: 50px;
+  background-color: ${({ theme }) => theme.primaryColors.orange};
+  color: ${({ theme }) => theme.neutralColors.white};
+  border-radius: 15px;
+  border: none;
+`;
+
+export const CartIcon = styled(cart)``;
+
+export const CounterButton = styled.button`
+  border: none;
+  background-color: transparent;
+  width: 50px;
+  font-size: 23px;
+  font-weight: bold;
+  color: ${({ theme }) => theme.primaryColors.orange};
 `;
