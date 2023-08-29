@@ -4,7 +4,7 @@ import { ReactComponent as next } from "../../images/icons/icon-next.svg";
 
 export const Container = styled.div`
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: ${({ active }) => (active ? "1fr" : "1fr auto")};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.large}) {
     display: flex;
@@ -15,10 +15,10 @@ export const Container = styled.div`
 
 export const Image = styled.img`
   margin: 70px 0 0 30px;
-  max-width: 450px;
+  max-width: ${({ active }) => (active ? "600px" : "450px")};
   border-radius: 15px;
   justify-self: flex-start;
-  cursor: pointer;
+  pointer-events: ${({ active }) => (active ? "none" : "pointer")};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.large}) {
     max-width: 767px;
@@ -37,9 +37,10 @@ export const Image = styled.img`
 `;
 
 export const ImageSmall = styled(Image)`
-  width: 80px;
-  margin: 0;
+  width: ${({ active }) => (active === true ? "120px" : "80px")};
+  margin: ${({ active }) => (active === true ? "-120px 0" : "0")};
   cursor: pointer;
+  pointer-events: all;
 `;
 
 export const Wrapper = styled.div`
