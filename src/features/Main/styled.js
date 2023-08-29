@@ -1,6 +1,11 @@
 import { styled } from "styled-components";
 import { ReactComponent as cart } from "../../images/icons/icon-cart.svg";
 
+export const Container = styled.div`
+  background-color: ${({ active, theme }) =>
+    active ? theme.neutralColors.lightGrayishBlue : theme.neutralColors.white};
+`;
+
 export const TileList = styled.ul`
   list-style-type: none;
   display: flex;
