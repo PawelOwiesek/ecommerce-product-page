@@ -4,6 +4,7 @@ import { data } from "../../core/assets/data";
 import {
   Button,
   CartIcon,
+  Count,
   Counter,
   CounterButton,
   CounterWrapper,
@@ -70,7 +71,7 @@ const Main = ({ counter, setCounter, addProductsToCart }) => {
                 <CounterButton onClick={() => counterDecrement()}>
                   -
                 </CounterButton>
-                <strong>{counter}</strong>
+                <Count>{counter}</Count>
                 <CounterButton onClick={() => counterIncrement()}>
                   +
                 </CounterButton>
