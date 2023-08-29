@@ -2,6 +2,13 @@
   <h1>Ecommerce-product-page</h1>
   <p><strong>DEMO:</strong> https://pawelowiesek.github.io/ecommerce-product-page/</p>
  <img width=450px src="https://github.com/PawelOwiesek/ecommerce-product-page/blob/master/public/ecommerce.png" rel="image"/>
+
+<h2>Demo</h2> 
+
+  
+  ![](https://github.com/PawelOwiesek/ecommerce-product-page/blob/master/public/ecommerceDemo.gif)
+
+
 </div>
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
