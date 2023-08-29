@@ -14,14 +14,14 @@ const Main = () => {
     if (index < 0) {
       return;
     }
-    setItemIndex(index - 1);
+    setItemIndex((index) => index - 1);
   };
 
   const onIndexNextChange = (index) => {
-    if (index >= 3) {
+    if (index > 4) {
       return;
     }
-    setItemIndex(index + 1);
+    setItemIndex((index) => index + 1);
   };
 
   return (
