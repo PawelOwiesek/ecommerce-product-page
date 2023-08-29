@@ -17,6 +17,6 @@ export const theme = {
     mobile: "320px",
     medium: "450px",
     large: "768px",
-    desktop: "1440px",
+    desktop: "1040px",
   },
 };
