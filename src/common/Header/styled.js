@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { ReactComponent as cart } from "../../images/icons/icon-cart.svg";
 
 export const Container = styled.div`
   display: grid;
@@ -18,10 +19,11 @@ export const Logo = styled.img`
   height: 19px;
 `;
 
-export const Cart = styled.img`
+export const Cart = styled(cart)`
   justify-self: end;
   margin-right: 30px;
   cursor: pointer;
+  color: ${({ theme }) => theme.neutralColors.darkGrayishBlue};
 `;
 export const Avatar = styled.img`
   width: 60px;
