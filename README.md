@@ -6,7 +6,7 @@
 <h2>Demo</h2> 
 
   
-  ![](https://github.com/PawelOwiesek/ecommerce-product-page/blob/master/public/ecommerceDemo.gif)
+<img width=450px src="https://github.com/PawelOwiesek/ecommerce-product-page/blob/master/public/ecommerceDemo.gif" />
 
 
 </div>
