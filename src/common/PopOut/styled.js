@@ -9,7 +9,11 @@ export const FrontDrop = styled.div`
   margin-left: 130px;
   background-color: rgba(66, 68, 90, 50%);
   box-shadow: 0px 0px 500px 500px rgba(66, 68, 90, 50%);
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    display: none;
+  }
 `;
+
 export const PopButton = styled.button`
   display: flex;
   justify-content: end;
