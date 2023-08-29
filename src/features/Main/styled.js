@@ -28,9 +28,28 @@ export const Item = styled.li`
 export const CounterWrapper = styled.div`
   display: flex;
   align-items: center;
-  width: 450px;
+  max-width: 450px;
+  width: 100%;
   float: right;
   gap: 20px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    flex-direction: column;
+    margin-top: -50px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.large}) {
+    justify-content: center;
+    float: none;
+    max-width: 767px;
+    margin-top: 20px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+    flex-direction: column;
+    max-width: 450px;
+    margin: 0;
+  }
 `;
 
 export const Counter = styled.p`
@@ -54,6 +73,7 @@ export const Button = styled.button`
   color: ${({ theme }) => theme.neutralColors.white};
   border-radius: 15px;
   border: none;
+  cursor: pointer;
 `;
 
 export const CartIcon = styled(cart)``;
@@ -62,7 +82,13 @@ export const CounterButton = styled.button`
   border: none;
   background-color: transparent;
   width: 50px;
-  font-size: 23px;
+  font-size: 30px;
   font-weight: bold;
   color: ${({ theme }) => theme.primaryColors.orange};
+  cursor: pointer;
+`;
+
+export const Count = styled.p`
+  font-size: 23px;
+  font-weight: bold;
 `;
