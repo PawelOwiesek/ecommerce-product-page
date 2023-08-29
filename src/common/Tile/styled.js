@@ -18,6 +18,7 @@ export const Image = styled.img`
   max-width: 450px;
   border-radius: 15px;
   justify-self: flex-start;
+  cursor: pointer;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.large}) {
     max-width: 767px;
@@ -38,6 +39,7 @@ export const Image = styled.img`
 export const ImageSmall = styled(Image)`
   width: 80px;
   margin: 0;
+  cursor: pointer;
 `;
 
 export const Wrapper = styled.div`

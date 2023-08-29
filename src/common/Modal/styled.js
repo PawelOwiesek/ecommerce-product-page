@@ -7,8 +7,8 @@ export const Container = styled.div`
   flex-direction: column;
   position: absolute;
   top: 80px;
-  right: 460px;
-  max-width: 320px;
+  right: 520px;
+  max-width: 370px;
   margin: 10px auto;
   width: 100%;
   height: 300px;
@@ -63,6 +63,7 @@ export const Button = styled.button`
   background-color: ${({ theme }) => theme.primaryColors.orange};
   color: ${({ theme }) => theme.neutralColors.white};
   font-weight: bold;
+  cursor: pointer;
 `;
 
 export const DeleteButton = styled.span`
