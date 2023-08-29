@@ -20,8 +20,8 @@ export const Logo = styled.img`
 `;
 
 export const Cart = styled(cart)`
+  width: 50px;
   justify-self: end;
-  margin-right: 30px;
   cursor: pointer;
   color: ${({ theme }) => theme.neutralColors.darkGrayishBlue};
 `;
@@ -45,4 +45,23 @@ export const Avatar = styled.img`
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     width: 35px;
   }
+`;
+
+export const CartCount = styled.p`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  width: 25px;
+  height: 15px;
+  border-radius: 15px;
+  text-align: center;
+  margin: -30px 0 0 10px;
+  background-color: ${({ theme }) => theme.primaryColors.orange};
+  color: ${({ theme }) => theme.neutralColors.white};
+  font-size: 12px;
+`;
+export const CartWrapper = styled.p`
+  justify-self: end;
 `;
