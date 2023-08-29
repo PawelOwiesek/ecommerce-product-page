@@ -13,14 +13,22 @@ import {
   Wrapper,
 } from "./styled";
 
-const Modal = ({ showModal, counter, result }) => {
-  counter = 4;
+const Modal = ({
+  showModal,
+  result,
+  addProductsToCart,
+  buyCount,
+  setBuyCount,
+}) => {
+  const removeItems = () => {
+    return setBuyCount((buyCount = 0));
+  };
 
   return (
     <Container showModal={showModal}>
       <Header>Cart</Header>
       <Content>
-        {counter === 0 ? (
+        {buyCount === 0 ? (
           "Your cart is empty"
         ) : (
           <>
@@ -32,16 +40,18 @@ const Modal = ({ showModal, counter, result }) => {
                     <div key={path.image[0]}>
                       <Tile small image={path.image[0]} alt={path.alt} />
                     </div>
-                    <CalculateResult>
+                    <CalculateResult
+                      onChange={() => addProductsToCart(buyCount)}
+                    >
                       <Title> {path.title}</Title>
                       <Costs>
                         <span>
-                          ${path.discountPrice.toFixed(2)} x {counter}
+                          ${path.discountPrice.toFixed(2)} x {buyCount}
                         </span>
                         <strong>
-                          ${(result = path.discountPrice * counter).toFixed(2)}
+                          ${(result = path.discountPrice * buyCount).toFixed(2)}
                         </strong>
-                        <DeleteButton>
+                        <DeleteButton onClick={() => removeItems()}>
                           <DeleteIcon />
                         </DeleteButton>
                       </Costs>
@@ -50,7 +60,7 @@ const Modal = ({ showModal, counter, result }) => {
                 );
               })}
             </Wrapper>
-            <Button>Checkout</Button>
+            <Button onClick={() => removeItems()}>Checkout</Button>
           </>
         )}
       </Content>
