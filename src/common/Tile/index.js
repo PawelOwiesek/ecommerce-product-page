@@ -28,15 +28,22 @@ const Tile = ({
   onIndexPrevChange,
   onIndexNextChange,
   itemIndex,
+  active,
+  setActiveItem,
 }) => {
   let result;
   return (
-    <Container>
+    <Container active={active}>
       {small ? (
-        <ImageSmall src={image} alt={alt} />
+        <ImageSmall active={active} src={image} alt={alt} />
       ) : (
         <>
-          <Image src={image} alt={alt} />
+          <Image
+            onClick={() => setActiveItem()}
+            active={active}
+            src={image}
+            alt={alt}
+          />
           <Buttons>
             <Button
               disabled={itemIndex === 0 ? true : false}
